@@ -1,6 +1,4 @@
-# New Location >> https://gitlab.com/dword4/nhlapi
-
-**I will no longer be maintaining the repo at this(github) location but it will remain up for posterity sake, the above link will contain all future work on the documentation.**
+# Original file is located here: [dword4/nhlapi](https://github.com/dword4/nhlapi)
 
 # NHL API Documentation
 
