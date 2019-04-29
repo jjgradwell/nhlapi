@@ -2,11 +2,6 @@
 
 # NHL API Documentation
 
-All of this has been compiled and tested by hand in Jan of 2018, prior to this most of the information was spread across the internet in various posts and not available in a cohesive
-single place.
-
-[OpenAPI 3.0 specification file for the NHL API](https://github.com/erunion/sport-api-specifications/tree/master/nhl) thanks to @[erunion](https://github.com/erunion)
-
 [Teams](#teams)
 
 [Divisions](#divisions)
