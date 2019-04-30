@@ -32,22 +32,32 @@
 
 ### <a name="teams"></a>Teams
 
-`GET https://statsapi.web.nhl.com/api/v1/teams` Returns a list of data about
+`GET https://statsapi.web.nhl.com/api/v1/teams`
+Returns a list of data about
 all teams including their id, venue details, division, conference and franchise information.
 
-`GET https://statsapi.web.nhl.com/api/v1/teams/ID` Returns the same information as above just
+`GET https://statsapi.web.nhl.com/api/v1/teams/ID`
+Returns the same information as above just
 for a single team instead of the entire league.
-#### Modifiers
-`?expand=team.roster` Shows roster of active players for the specified team 
-`?expand=person.names` Same as above, but gives less info.
-`?expand=team.schedule.next` Returns details of the upcoming game for a team
-`?expand=team.schedule.previous` Same as above but for the last game played
-`?expand=team.stats` Returns the teams stats for the season
-`?expand=team.roster&season=20142015` Adding the season identifier shows the roster for that season
-`?teamId=4,5,29` Can string team id together to get multiple teams
-`?stats=statsSingleSeasonPlayoffs` Speciy which stats to get. Not fully sure all of the values
 
-`GET https://statsapi.web.nhl.com/api/v1/teams/ID/roster` Returns entire roster for a team
+#### Modifiers
+`?expand=team.roster`  Shows roster of active players for the specified team
+
+`?expand=person.names`  Same as above, but gives less info.
+
+`?expand=team.schedule.next`  Returns details of the upcoming game for a team
+
+`?expand=team.schedule.previous`  Same as above but for the last game played
+
+`?expand=team.stats`  Returns the teams stats for the season
+
+`?expand=team.roster&season=20142015`  Adding the season identifier shows the roster for that season
+
+`?teamId=4,5,29`  Can string team id together to get multiple teams
+
+`?stats=statsSingleSeasonPlayoffs`  Specify which stats to get. Not fully sure all of the values
+
+`GET https://statsapi.web.nhl.com/api/v1/teams/ID/roster`  Returns entire roster for a team
 including id value, name, jersey number and position details.
 
 ---
@@ -76,26 +86,34 @@ specify the id value in order to return data.
 lots of append options to change what kind of stats you wish to obtain
 
 #### Modifiers
-`?stats=statsSingleSeason&season=19801981`  Obtains single season statistics
-for a player
+`?stats=statsSingleSeason&season=19801981`  Obtains single season statistics for a player
+
 `?stats=homeAndAway&season=20162017` Provides a split between home and away games.
+
 `?stats=winLoss&season=20162017` Very similar to the previous modifier except it provides the W/L/OT split instead of Home and Away
+
 `?stats=byMonth&season=20162017` Monthly split of stats
+
 `?stats=byDayOfWeek&season=20162017` Split done by day of the week
+
 `?stats=vsDivision&season=20162017` Division stats split
+
 `?stats=vsConference&season=20162017` Conference stats split
+
 `?stats=vsTeam&season=20162017` Conference stats split
+
 `?stats=gameLog&season=20162017` Provides a game log showing stats for each game of a season
-`?stats=regularSeasonStatRankings&season=20162017` Returns where someone stands vs
-the rest of the league for a specific regularSeasonStatRankings
-`?stats=goalsByGameSituation&season=20162017` Shows number on when goals for a
-player happened like how many in the shootout, how many in each period, etc.
-`?stats=onPaceRegularSeason&season=20172018` This only works with the current
-in-progress season and shows **projected** totals based on current onPaceRegularSeason
+
+`?stats=regularSeasonStatRankings&season=20162017` Returns where someone stands vs the rest of the league for a specific regularSeasonStatRankings
+
+`?stats=goalsByGameSituation&season=20162017` Shows number on when goals for a player happened like how many in the shootout, how many in each period, etc.
+
+`?stats=onPaceRegularSeason&season=20172018` This only works with the current in-progress season and shows **projected** totals based on current onPaceRegularSeason
 
 ---
 ### <a name="game"></a>Game
-`GET https://statsapi.web.nhl.com/api/v1/game/ID/feed/live` Returns all data about
+`GET https://statsapi.web.nhl.com/api/v1/game/ID/feed/live`
+Returns all data about
 a specified game id including play data with on-ice coordinates and post-game
 details like first, second and third stars and any details about shootouts.  The
 data returned is simply too large at often over 30k lines and is best explored
@@ -121,12 +139,19 @@ The first 4 digits identify the season of the game (ie. 2017 for the 2017-2018 s
 `GET https://statsapi.web.nhl.com/api/v1/schedule` Returns a list of data about the schedule for a specified date range. If no date range is specified, returns results from the current day.
 
 #### Modifiers
-`?expand=schedule.broadcasts` Shows the broadcasts of the game
+`?expand=schedule.broadcasts`  Shows the broadcasts of the game
+
+
 `?expand=schedule.linescore` Linescore for completed games
+
 `?expand=schedule.ticket` Provides the different places to buy tickets for the upcoming games
+
 `?teamId=30` Limit results to a specific team. Team ids can be found through the teams endpoint
+
 `?date=2018-01-09` Single defined date for the search
+
 `?startDate=2018-01-09` Start date for the search
+
 `?endDate=2018-01-12` End date for the search
 
 `GET https://statsapi.web.nhl.com/api/v1/schedule?teamId=30` Returns Minnesota Wild games for the current day.
@@ -142,7 +167,9 @@ for each team broken up by divisions
 
 #### Modifiers
 `?season=20032004` Standings for a specified season
+
 `?date=2018-01-09` Standings on a specified date
+
 `?expand=standings.record` Detailed information for each team including home and away records, record in shootouts, last ten games, and split head-to-head records against divisions and conferences
 
 ---
