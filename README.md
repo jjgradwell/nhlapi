@@ -15,6 +15,8 @@
 
 [Tournaments](#tournaments)
 
+[Franchises](#franchises)
+
 [Schedule](#schedule)
 
 [Seasons](#seasons)
@@ -599,6 +601,12 @@ In order to get additional information the expand modifer can be used such as th
 
 `&expand=round.series,schedule.game.seriesSummary&season=20182019` This will add in details  like the game summary and the season
 
+---
+### <a name="franchises"></a>Franchises
+`GET https://statsapi.web.nhl.com/api/v1/franchises`  Returns full list of franchises
+and associated data like the current team for each franchise id
+
+`GET https://statsapi.web.nhl.com/api/v1/franchises/ID`  Returns full information for just the specified franchise id
 
 ---
 ### <a name="schedule">Schedule
